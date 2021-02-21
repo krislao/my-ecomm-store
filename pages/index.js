@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import products from "../products.json";
 
 export default function Home() {
   return (
@@ -20,57 +21,22 @@ export default function Home() {
         </p>
 
         <ul className={styles.grid}>
-          <li className={styles.card}>
-            <a href="#">
-              <Image
-                src="/spacejelly-tshirt.jpg"
-                alt="Space Jelly Tshirt"
-                width={250}
-                height={250}
-                layout="responsive"
-              />
-              <h3>Space Jelly Tshirt</h3>
-              <p>
-                Bring Cosmo the space Jellyfish to your wardrobe with this high
-                quality tshirt.
-              </p>
-              <p>$50</p>
-            </a>
-          </li>
-          <li className={styles.card}>
-            <a href="#">
-              <Image
-                src="/spacejelly-stickers.jpg"
-                alt="Space Jelly Stickers"
-                width={250}
-                height={250}
-                layout="responsive"
-              />
-              <h3>Space Jelly Stickers</h3>
-              <p>
-                Add some flare to your laptop with a sticker of Cosmo the Space
-                Jellyfish.
-              </p>
-              <p>$25.00</p>
-            </a>
-          </li>
-          <li className={styles.card}>
-            <a href="#">
-              <Image
-                src="/spacejelly-combo.jpg"
-                alt="Space Jelly Combo"
-                width={250}
-                height={250}
-                layout="responsive"
-              />
-
-              <h3>Space Jelly Combo</h3>
-              <p>
-                Show your love for Cosmo with a tshirt and sticker combo pack!
-              </p>
-              <p>$60</p>
-            </a>
-          </li>
+          {products.map((product) => (
+            <li key={product.id} className={styles.card}>
+              <a href="#">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={250}
+                  height={250}
+                  layout="responsive"
+                />
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+                <p>{product.description}</p>
+              </a>
+            </li>
+          ))}
         </ul>
       </main>
 
