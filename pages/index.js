@@ -16,47 +16,62 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          Get started by selecting our products
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Space Jelly Tshirt</h3>
-            <p>
-              Bring Cosmo the space Jellyfish to your wardrobe with this high
-              quality tshirt.
-            </p>
-          </a>
+        <ul className={styles.grid}>
+          <li className={styles.card}>
+            <a href="#">
+              <Image
+                src="/spacejelly-tshirt.jpg"
+                alt="Space Jelly Tshirt"
+                width={250}
+                height={250}
+                layout="responsive"
+              />
+              <h3>Space Jelly Tshirt</h3>
+              <p>
+                Bring Cosmo the space Jellyfish to your wardrobe with this high
+                quality tshirt.
+              </p>
+              <p>$50</p>
+            </a>
+          </li>
+          <li className={styles.card}>
+            <a href="#">
+              <Image
+                src="/spacejelly-stickers.jpg"
+                alt="Space Jelly Stickers"
+                width={250}
+                height={250}
+                layout="responsive"
+              />
+              <h3>Space Jelly Stickers</h3>
+              <p>
+                Add some flare to your laptop with a sticker of Cosmo the Space
+                Jellyfish.
+              </p>
+              <p>$25.00</p>
+            </a>
+          </li>
+          <li className={styles.card}>
+            <a href="#">
+              <Image
+                src="/spacejelly-combo.jpg"
+                alt="Space Jelly Combo"
+                width={250}
+                height={250}
+                layout="responsive"
+              />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Space Jelly Stickers</h3>
-            <p>
-              Add some flare to your laptop with a sticker of Cosmo the Space
-              Jellyfish.
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Space Jelly Combo</h3>
-            <p>
-              Show your love for Cosmo with a tshirt and sticker combo pack!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+              <h3>Space Jelly Combo</h3>
+              <p>
+                Show your love for Cosmo with a tshirt and sticker combo pack!
+              </p>
+              <p>$60</p>
+            </a>
+          </li>
+        </ul>
       </main>
 
       <footer className={styles.footer}>
